@@ -31,15 +31,20 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
       - name: Build with Next.js
-        run: npx next build
-        env:
-          NEXT_TELEMETRY_DISABLED: 1
-      - name: Debug Output
-        run: ls -R
+        run: npm run build
+      - name: Verify build output
+        run: |
+          if [ -d "out" ]; then
+            echo "Out directory exists"
+            ls -la out
+          else
+            echo "Out directory is MISSING"
+            ls -la
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./out/
 
   deploy:
     environment:
