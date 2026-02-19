@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath: "/astra-voyage",
   assetPrefix: "/astra-voyage",
+  trailingSlash: true,
   /* config options here */
   typescript: {
     ignoreBuildErrors: false,
