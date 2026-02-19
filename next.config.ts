@@ -6,13 +6,6 @@ const nextConfig: NextConfig = {
   assetPrefix: "/astra-voyage",
   trailingSlash: true,
   /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  // @ts-ignore
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   reactStrictMode: false,
   images: {
     unoptimized: true,
