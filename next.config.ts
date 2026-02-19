@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+  basePath: "/astra-voyage",
+  assetPrefix: "/astra-voyage",
   /* config options here */
   typescript: {
     ignoreBuildErrors: false,
